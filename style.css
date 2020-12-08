@@ -16,3 +16,23 @@ body {
 p {
   margin: 0px;
 }
+
+#button {
+  background-color: transparent; /* Green */
+  border: 1px solid #bc4749;
+  color: #bc4749;
+  padding: 5px 10px;
+  border-radius: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-family: inherit;
+  font-size: 1em;
+  margin: 20px auto;
+  transition-duration: 0.4s;
+}
+#button:hover {
+  cursor: pointer;
+  border: 1px solid #386641;
+  color: #386641;
+}
