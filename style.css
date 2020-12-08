@@ -4,9 +4,13 @@ body {
   /* A good sans-serif font stack */
   font-family: "Pragati Narrow", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   text-align: center;
-  padding: 20px 40px;
+  padding: 50px 60px;
   margin: 0;
   font-size: 1.3em;
+}
+
+#santa {
+  height: 100px;
 }
 
 #intro h1 {
