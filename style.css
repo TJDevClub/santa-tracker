@@ -1,0 +1,18 @@
+body {
+  background-color: #f2e8cf;
+  color: #bc4749;
+  /* A good sans-serif font stack */
+  font-family: "Pragati Narrow", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  padding: 20px 40px;
+  margin: 0;
+  font-size: 1.3em;
+}
+
+#intro h1 {
+  font-size: 2em;
+}
+#intro h1,
+p {
+  margin: 0px;
+}
