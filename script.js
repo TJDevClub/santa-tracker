@@ -1,27 +1,20 @@
 // Declare a variable that will hold all the locations
 // Use `let` for clarity, even though `const` arrays are mutable
 let locations = [];
-const headers = ["Place", "Time", "Packages"];
 
 // Allows us to manipulate the table using JS
 let table = document.getElementById("table");
-
-// Initialize the table
-let thead = table.createTHead();
-let row = thead.insertRow();
-for (let key of headers) {
-  let th = document.createElement("th");
-  let text = document.createTextNode(key);
-  th.appendChild(text);
-  row.appendChild(th);
-}
+let tableBody = table.createTBody();
 
 // Adds a new entry to the table
 function append(table, entry) {
-  let row = table.insertRow(1);
+  let row = table.insertRow();
   for (key in entry) {
     let cell = row.insertCell();
-    let text = document.createTextNode(entry[key]);
+    let text =
+      entry[key] instanceof Date
+        ? document.createTextNode(entry[key].toLocaleString())
+        : document.createTextNode(entry[key]);
     cell.appendChild(text);
   }
 }
@@ -35,5 +28,5 @@ function locate() {
   });
   console.log(locations);
   // We only want to generate the latest entry
-  append(table, locations[0]);
+  append(tableBody, locations[0]);
 }

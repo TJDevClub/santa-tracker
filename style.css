@@ -12,6 +12,9 @@ body {
 #intro h1 {
   font-size: 2em;
 }
+#intro p {
+  color: #386641;
+}
 #intro h1,
 p {
   margin: 0px;
@@ -35,4 +38,24 @@ p {
   cursor: pointer;
   border: 1px solid #386641;
   color: #386641;
+}
+
+#table {
+  width: 60%;
+  text-align: left;
+  margin: 0 auto;
+}
+#table th {
+  border-bottom: 2px solid #bc4749;
+}
+#table tbody tr:first-child td {
+  padding-top: 10px;
+}
+
+/* Alternate row color (magic) */
+#table tbody tr:nth-child(odd) {
+  color: #a7c957;
+}
+#table tbody tr:nth-child(even) {
+  color: #6a994e;
 }
