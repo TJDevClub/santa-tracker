@@ -1,5 +1,14 @@
 // Declare a variable that will hold all the locations
 // Use `let` for clarity, even though `const` arrays are mutable
+let places = [
+  "San Diego, United States",
+  "São Paulo, Brazil",
+  "Shenzhen, China",
+  "Daejeon, South Korea",
+  "Delhi, India",
+  "Chicago, United States",
+  "Riyadh, Saudi Arabia",
+];
 let locations = [];
 
 // Allows us to manipulate the table using JS
@@ -8,7 +17,7 @@ let tableBody = table.createTBody();
 
 // Adds a new entry to the table
 function append(table, entry) {
-  let row = table.insertRow();
+  let row = table.insertRow(0);
   for (key in entry) {
     let cell = row.insertCell();
     let text =
@@ -22,9 +31,9 @@ function append(table, entry) {
 function locate() {
   // `unshift` adds the object to the beginning of the array
   locations.unshift({
-    place: "Fairfax, VA, USA",
+    place: places[Math.floor(Math.random() * places.length)],
     time: new Date(),
-    packages: 10,
+    packages: Math.ceil(Math.random() * 100),
   });
   console.log(locations);
   // We only want to generate the latest entry
